@@ -14,7 +14,7 @@ namespace UnitySensors.Sensor.Camera
             // Unity 6000+ requires depth buffer for render textures used with cameras
             _rt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGB32);
 #else
-            _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGB32);
 #endif
             _camera.targetTexture = _rt;
 
